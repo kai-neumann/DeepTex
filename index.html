@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DeepTex: Deep Learning-Based Texturing of Image-Based 3D Reconstructions">
+  <meta property="og:title" content="DeepTex Project Page"/>
+  <meta property="og:description" content="DeepTex: Deep Learning-Based Texturing of Image-Based 3D Reconstructions"/>
+  <meta property="og:url" content="https://kai-neumann.github.io/DeepTex/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/ComparisonImage_Aphrodite_Banner_600.jpg" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="DeepTex Project Page">
+  <meta name="twitter:description" content="DeepTex: Deep Learning-Based Texturing of Image-Based 3D Reconstructions">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/ComparisonImage_Aphrodite_Banner_600.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Reconstruction; Computer vision; Artificial intelligence">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>DeepTex: Deep Learning-Based Texturing of Image-Based 3D Reconstructions</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">DeepTex: Deep Learning-Based Texturing of Image-Based 3D Reconstructions</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://github.com/kai-neumann" target="_blank">K. A. Neumann</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="https://www.igd.fraunhofer.de/en/institute/employees/pedro-santos.html" target="_blank">P. Santos</a><sup>1</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://www.igd.fraunhofer.de/en/institute/employees/dieter-w-fellner.html" target="_blank">D.W. Fellner</a><sup>1,2,3</sup>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>Fraunhofer Institute for Computer Graphics Research IGD, Germany<br><sup>2</sup>TU Darmstadt, Germany<br><sup>3</sup>Graz University of Technology, Institute of Computer Graphics and Knowledge Visualization, Austria<br><br><b>Eurographics Workshop on Graphics and Cultural Heritage (GCH 2024)</b></span>
+                    <!--<span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  </div>
+				  
+				  <!-- Arxiv PDF link -->
+                   <div class="column has-text-centered">
+                    <div class="publication-links">
+                      <span class="link-block">
+                        <a href="https://diglib.eg.org/server/api/core/bitstreams/a81eb650-802b-433e-8737-b3d9bed33e45/content" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+					
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/kai-neumann/DeepTex" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <!--<span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/ComparisonAnimation_Aphrodite.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        DeepTex is works especially well on objects with glossy surfaces, as it is able to completely remove specular highlights from the resulting texture. In comparison, specular highlights end up in the textures produced by all other tested texturing approaches.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Image-based 3D reconstruction is a commonly used technique for measuring the geometry and color of objects or scenes based
+			on images. While the geometry reconstruction of state-of-the-art approaches is mostly robust against varying lighting conditions
+			and outliers, these pose a significant challenge for calculating an accurate texture map. This work proposes a deep-learning
+			based texturing approach called “DeepTex” that uses a custom learned blending method on top of a traditional mosaic-based
+			texturing approach. The model was trained using a custom synthetic data generation workflow and showed a significantly
+			increased accuracy when generating textures in the presence of outliers and non-uniform lighting.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+      <h2 class="title is-3">Network Design</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+			<div class="item">
+				<!-- Your image here -->
+				<img src="static/images/NetworkDiagramm.png" alt="Network diagram"/>
+				<h2 class="subtitle has-text-centered">
+				  Overview of the proposed network structure. The input volume is processed using three consecutive 3D convolution blocks (3D
+Conv), each followed by a ReLU activation and a MaxPooling operation (MaxPool). Afterwards two fully connected layers (FC) are used to
+produce a weight vector that is multiplied with the 15 candidate colors of the center pixel to produce and output color.
+				</h2>
+			</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Image carousel -->
+<!--<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+	
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          First image description.
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Second image description.
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+         Third image description.
+       </h2>
+     </div>
+     <div class="item">
+      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+        Fourth image description.
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section>-->
+<!-- End image carousel -->
+
+<section class="hero is-small is-light">
+  <div class="container is-max-desktop">
+	<h2 class="title is-3">Qualitative Results</h2>
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/ComparisonAnimation_Bottle.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        In our tests, DeepTex is the only texturing approach that is able to completely remove all shading information from the input texture, yielding a high quality albedo map.  
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Quantitative Results</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="item">
+            <div id="largeTable" class="table-container">
+              <table border="1" style="width: 100%;">
+                <tr style="background-color: #EFEFEF;">
+                  <th></th>
+                  <th colspan="6">No Outlier Images</th>
+                  <th colspan="6">25% Outlier Images</th>
+                </tr>
+                <tr style="background-color: #EFEFEF;">
+                  <th></th>
+                  <th colspan="2">SSIM</th>
+                  <th colspan="2">MSE</th>
+                  <th colspan="2">Runtime [s]</th>
+                  <th colspan="2">SSIM</th>
+                  <th colspan="2">MSE</th>
+                  <th colspan="2">Runtime [s]</th>
+                </tr>
+                <tr style="background-color: #EFEFEF;">
+                  <th></th>
+                  <th>Mean</th>
+                  <th>SD</th>
+                  <th>Mean</th>
+                  <th>SD</th>
+                  <th>Mean</th>
+                  <th>SD</th>
+                  <th>Mean</th>
+                  <th>SD</th>
+                  <th>Mean</th>
+                  <th>SD</th>
+                  <th>Mean</th>
+                  <th>SD</th>
+                </tr>
+                <tr>
+                  <td>Greedy Algorithm</td>
+                  <td>0.9063</td>
+                  <td><i>0.0758</i></td>
+                  <td>0.004</td>
+                  <td><i>0.0027</i></td>
+                  <td><b>8.3531</b></td>
+                  <td><i>8.1196</i></td>
+                  <td>0.7868</td>
+                  <td><i>0.1038</i></td>
+                  <td>0.0119</td>
+                  <td><i>0.0061</i></td>
+                  <td><b>8.3198</b></td>
+                  <td><i>8.0852</i></td>
+                </tr>
+                <tr>
+                  <td>Agisoft Metashape</td>
+                  <td>0.3737</td>
+                  <td><i>0.1736</i></td>
+                  <td>0.0063</td>
+                  <td><i>0.0053</i></td>
+                  <td>24.5319</td>
+                  <td><i>21.9542</i></td>
+                  <td>0.3537</td>
+                  <td><i>0.1628</i></td>
+                  <td>0.0079</td>
+                  <td><i>0.0062</i></td>
+                  <td>25.1723</td>
+                  <td><i>22.8336</i></td>
+                </tr>
+                <tr>
+                  <td>MVS-Texturing</td>
+                  <td>0.7968</td>
+                  <td><i>0.1715</i></td>
+                  <td>0.0076</td>
+                  <td><i>0.0053</i></td>
+                  <td>34.8812</td>
+                  <td><i>38.2563</i></td>
+                  <td>0.7876</td>
+                  <td><i>0.1724</i></td>
+                  <td>0.0081</td>
+                  <td><i>0.0054</i></td>
+                  <td>35.9665</td>
+                  <td><i>39.1061</i></td>
+                </tr>
+                <tr>
+                  <td>DeepTex (ours)</td>
+                  <td><b>0.9786</b></td>
+                  <td><i>0.0141</i></td>
+                  <td><b>0.0005</b></td>
+                  <td><i>0.0003</i></td>
+                  <td>65.2687</td>
+                  <td><i>14.5862</i></td>
+                  <td><b>0.9608</b></td>
+                  <td><i>0.0232</i></td>
+                  <td><b>0.0009</b></td>
+                  <td><i>0.0006</i></td>
+                  <td>65.1384</td>
+                  <td><i>14.0693</i></td>
+                </tr>
+              </table>
+            </div>
+
+            <div id="splitTables" class="table-container">
+              <h3>No Outlier Images</h3>
+              <table border="1" style="width: 100%;">
+                <tr style="background-color: #EFEFEF;">
+                  <th></th>
+                  <th colspan="2">SSIM</th>
+                  <th colspan="2">MSE</th>
+                  <th colspan="2">Runtime [s]</th>
+                </tr>
+                <tr style="background-color: #EFEFEF;">
+                  <th></th>
+                  <th>Mean</th>
+                  <th>SD</th>
+                  <th>Mean</th>
+                  <th>SD</th>
+                  <th>Mean</th>
+                  <th>SD</th>
+                </tr>
+                <tr>
+                  <td>Greedy Algorithm</td>
+                  <td>0.9063</td>
+                  <td><i>0.0758</i></td>
+                  <td>0.004</td>
+                  <td><i>0.0027</i></td>
+                  <td><b>8.3531</b></td>
+                  <td><i>8.1196</i></td>
+                </tr>
+                <tr>
+                  <td>Agisoft Metashape</td>
+                  <td>0.3737</td>
+                  <td><i>0.1736</i></td>
+                  <td>0.0063</td>
+                  <td><i>0.0053</i></td>
+                  <td>24.5319</td>
+                  <td><i>21.9542</i></td>
+                </tr>
+                <tr>
+                  <td>MVS-Texturing</td>
+                  <td>0.7968</td>
+                  <td><i>0.1715</i></td>
+                  <td>0.0076</td>
+                  <td><i>0.0053</i></td>
+                  <td>34.8812</td>
+                  <td><i>38.2563</i></td>
+                </tr>
+                <tr>
+                  <td>DeepTex (ours)</td>
+                  <td><b>0.9786</b></td>
+                  <td><i>0.0141</i></td>
+                  <td><b>0.0005</b></td>
+                  <td><i>0.0003</i></td>
+                  <td>65.2687</td>
+                  <td><i>14.5862</i></td>
+                </tr>
+              </table>
+              
+              <h3>25% Outlier Images</h3>
+              <table border="1" style="width: 100%;">
+                <tr style="background-color: #EFEFEF;">
+                  <th></th>
+                  <th colspan="2">SSIM</th>
+                  <th colspan="2">MSE</th>
+                  <th colspan="2">Runtime [s]</th>
+                </tr>
+                <tr style="background-color: #EFEFEF;">
+                  <th></th>
+                  <th>Mean</th>
+                  <th>SD</th>
+                  <th>Mean</th>
+                  <th>SD</th>
+                  <th>Mean</th>
+                  <th>SD</th>
+                </tr>
+                <tr>
+                  <td>Greedy Algorithm</td>
+                  <td>0.7868</td>
+                  <td><i>0.1038</i></td>
+                  <td>0.0119</td>
+                  <td><i>0.0061</i></td>
+                  <td><b>8.3198</b></td>
+                  <td><i>8.0852</i></td>
+                </tr>
+                <tr>
+                  <td>Agisoft Metashape</td>
+                  <td>0.3537</td>
+                  <td><i>0.1628</i></td>
+                  <td>0.0079</td>
+                  <td><i>0.0062</i></td>
+                  <td>25.1723</td>
+                  <td><i>22.8336</i></td>
+                </tr>
+                <tr>
+                  <td>MVS-Texturing</td>
+                  <td>0.7876</td>
+                  <td><i>0.1724</i></td>
+                  <td>0.0081</td>
+                  <td><i>0.0054</i></td>
+                  <td>35.9665</td>
+                  <td><i>39.1061</i></td>
+                </tr>
+                <tr>
+                  <td>DeepTex (ours)</td>
+                  <td><b>0.9608</b></td>
+                  <td><i>0.0232</i></td>
+                  <td><b>0.0009</b></td>
+                  <td><i>0.0006</i></td>
+                  <td>65.1384</td>
+                  <td><i>14.0693</i></td>
+                </tr>
+              </table>
+            </div>
+            <h2 class="subtitle has-text-centered">
+              <br>Quantitative analysis of the texture accuracy and runtime when calculating a texture using multiple different approaches. The runtime was measured on a system with an AMD Ryzen 7 (3.60 GHz) and a NVIDIA GeForce RTX 4060 Laptop GPU.
+            </h2>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #splitTables {
+    display: none;
+  }
+
+  @media (max-width: 1200px) {
+    #largeTable {
+      display: none;
+    }
+    #splitTables {
+      display: block;
+    }
+  }
+</style>
+
+
+
+
+<!-- Youtube video -->
+<!--<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>-->
+<!-- End youtube video -->
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX" style="background-color: #f5f5f5;">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre style="background-color: white;"><code>@inproceedings{10.2312:gch.20241257,
+	booktitle = {Eurographics Workshop on Graphics and Cultural Heritage},
+	editor = {Corsini, Massimiliano and Ferdani, Daniele and Kuijper, Arjan and Kutlu, Hasan},
+	title = {{DeepTex: Deep Learning-Based Texturing of Image-Based 3D Reconstructions}},
+	author = {Neumann, Kai Alexander and Santos, Pedro and Fellner, Dieter W.},
+	year = {2024},
+	publisher = {The Eurographics Association},
+	ISSN = {2312-6124},
+	ISBN = {978-3-03868-248-6},
+	DOI = {10.2312/gch.20241257}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
